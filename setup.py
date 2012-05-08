@@ -6,7 +6,7 @@ from distutils.sysconfig import get_python_lib
 blowfish = Extension(
     name = '_ecblowfish',
     sources = ['blowfish.c'],
-    libraries=['ssl'],
+    libraries=['crypto'],
 )
 
 setup(

@@ -1,0 +1,11 @@
+ectoken (0.1-2~karmic1) karmic-dc; urgency=low
+
+  * Cloud repository
+
+ -- Sebastien Estienne <sebastien.estienne@gmail.com>  Tue, 08 May 2012 18:12:02 +0200
+
+ectoken (0.1-1) unstable; urgency=low
+
+  * source package automatically created by stdeb 0.6.0
+
+ -- Sebastien Estienne <sebastien.estienned@gmail.com>  Tue, 08 May 2012 18:11:56 +0200
