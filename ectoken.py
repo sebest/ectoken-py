@@ -11,6 +11,8 @@ def find_lib(name):
 bf = CDLL(find_lib('_ecblowfish.so'))
 
 def ectoken_generate(key, string):
+    if isinstance(string, unicode):
+        string = string.encode('utf-8')
     string = 'ec_secure=%03d&%s' % (len(string) + 14, string)
     string_len = len(string)
     output = create_string_buffer(string_len)
