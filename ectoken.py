@@ -12,6 +12,7 @@ bf = CDLL(find_lib('_ecblowfish.so'))
 
 def ectoken_generate(key, string):
     string = 'ec_secure=%03d&%s' % (len(string) + 14, string)
-    output = create_string_buffer(1024)
-    bf.bfencrypt(key, len(key), string, byref(output), len(string))
-    return output.value.encode('hex_codec')
+    string_len = len(string)
+    output = create_string_buffer(string_len)
+    bf.bfencrypt(key, len(key), string, byref(output), string_len)
+    return output.raw.encode('hex_codec')

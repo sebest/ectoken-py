@@ -1,3 +1,9 @@
+ectoken (0.2-1~karmic1) karmic-dc; urgency=low
+
+  * Fix a bug
+
+ -- Sebastien Estienne <sebastien.estienne@gmail.com>  Tue, 08 May 2012 22:06:29 +0200
+
 ectoken (0.1-2~karmic1) karmic-dc; urgency=low
 
   * Cloud repository

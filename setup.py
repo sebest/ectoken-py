@@ -1,4 +1,4 @@
-name, version = 'ectoken', '0.1'
+name, version = 'ectoken', '0.2'
 
 from distutils.core import setup, Extension
 from distutils.sysconfig import get_python_lib
