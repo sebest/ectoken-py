@@ -1,6 +1,6 @@
 name, version='ectoken', '0.2'
 
-from distutils.core import setup, Extension
+from setuptools import setup, Extension
 
 blowfish=Extension(
     name='_ecblowfish',
@@ -17,4 +17,5 @@ setup(
     url="https://github.com/sebest/ectoken-py",
     py_modules=['ectoken'],
     ext_modules=[blowfish],
+    install_requires=['setuptools'],
 )
