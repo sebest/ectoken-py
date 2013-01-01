@@ -1,16 +1,13 @@
-import sys
-import os.path as osp
 from ctypes import CDLL, create_string_buffer, byref
+import pkg_resources
 
-def find_lib(name):
-    for p in sys.path:
-        if not p.endswith('.egg'):
-            if osp.exists(osp.join(p, name)):
-                return osp.join(p, name)
+bf = CDLL(pkg_resources.resource_filename(__name__, '_ecblowfish.so'))
 
-bf = CDLL(find_lib('_ecblowfish.so'))
 
 def ectoken_generate(key, string):
+    if len(string) > 512:
+        raise ValueError(
+            '%r exceeds maximum length of 512 characters' % string)
     if isinstance(string, unicode):
         string = string.encode('utf-8')
     string = 'ec_secure=%03d&%s' % (len(string) + 14, string)
