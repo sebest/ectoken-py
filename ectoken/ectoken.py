@@ -1,10 +1,16 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 from ctypes import CDLL, create_string_buffer, byref
 import pkg_resources
 
-bf = CDLL(pkg_resources.resource_filename(__name__, '_ecblowfish.so'))
-
+bf = None
 
 def ectoken_generate(key, string):
+    global bf
+    if not bf:
+        bf = CDLL(pkg_resources.resource_filename(__name__, '_ecblowfish.so'))
+
     if len(string) > 512:
         raise ValueError(
             '%r exceeds maximum length of 512 characters' % string)

@@ -1,8 +1,0 @@
-Python implementation of EdgeCast Token: ectoken_generate
-
-Usage:
-import ectoken
-
-key = 'XXXXXXXXXXXXXX'
-message = 'YYYYYYYYYY'
-print ectoken.ectoken_generate(key, message)
