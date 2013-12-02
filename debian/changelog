@@ -1,3 +1,9 @@
+ectoken (0.2-3~precise1) precise-dc; urgency=low
+
+  * Precise repository
+
+ -- Sebastien Estienne <sebastien.estienne@gmail.com>  Mon, 02 Dec 2013 03:00:02 +0100
+
 ectoken (0.2-2~karmic1) karmic-dc; urgency=low
 
   * Fix a bug
