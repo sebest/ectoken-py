@@ -22,7 +22,7 @@ blowfish=Extension(
 
 setup(
     name='ectoken',
-    version='0.3',
+    version='0.4',
     description='Python implementation of EdgeCast Token (ectoken_generate).',
     long_description=readme + '\n\n' + history,
     author='Sébastien Estienne',
