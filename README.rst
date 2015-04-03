@@ -9,10 +9,11 @@ Python implementation of EdgeCast Token (ectoken_generate).
 Usage
 -----
 
-```
-import ectoken
+.. code-block:: python
 
-key = 'XXXXXXXXXXXXXX'
-url = 'http://my.edgesuite.net/path/to/my/file.txt'
-print ectoken.ectoken_generate(key, url)
-```
+   import ectoken
+
+   key = 'XXXXXXXXXXXXXX'
+   url = 'http://my.edgesuite.net/path/to/my/file.txt'
+   print ectoken.ectoken_generate(key, url)
+
